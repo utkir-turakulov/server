@@ -1,0 +1,191 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Planet of tours</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">		
+		<script type="text/javascript" src="../sources/bootstrap/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../sources/bootstrap/bootstrap.js"></script>
+		<link rel="stylesheet" href="../sources/bootstrap/bootstrap.css">
+		<link rel="stylesheet" href="../sources/bootstrap/bootstrap-theme.css.map" >
+		<link href="../css/style.css" type="text/css" rel="stylesheet"/>
+		<script type="text/javascript" src="../js/tour_calculator.js"></script>
+	</head>
+	<body>
+	<div id="tops-line"></div>
+		<div id="wrapper">
+			<div id="header"> 
+					<div id="logo">
+						<a href="creative.html"><img src="../images/logo.png" alt="Логотип" /></a>
+					</div>
+					<div id="menu" class="navbar">
+						<ul>
+							<li style="list-style-type:none"><a href="Main.html" class="active">Главная</a></li>
+							<li style="list-style-type:none"><a href="Tours.html">Туры</a></li>
+							<li style="list-style-type:none"><a href="Hotels.html">Отели</a></li>
+							<li style="list-style-type:none"><a href="#">Авиа</a></li>
+							<li style="list-style-type:none"><a href="#">Бронь</a></li>
+							
+						</ul>
+					</div>
+			</div>
+		</div>
+		
+	
+<div class="tours-list" >
+	
+	<div class="row tour-images">
+	  
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/country/card_big/vn.jpg" alt="...">
+			  <div class="caption">
+				<h3>Вьетнам</h3>
+				<p>51 817 руб.</p>
+			  </div>
+			</div>
+		  </div>
+
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img style="width:100%;" src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/country/card_small/tr.jpg" alt="...">
+			  <div class="caption">
+				<h3>Турция</h3>
+				<p>18 871 руб.</p>
+			  </div>
+			</div>
+		  </div>
+	 
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img style="width:100%;" src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/country/card_big/th.jpg" alt="...">
+			  <div class="caption">
+				<h3>Таиланд</h3>
+				<p>41 626 руб.</p>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img style="width:100%;" src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/resort/card_big/ru/krasnaya_polyana.jpg" alt="...">
+			  <div class="caption">
+				<h3>Крассная Поляна</h3>
+				<p>4 249 руб.</p>
+			  </div>
+			</div>
+		  </div>
+	  
+	  
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img style="width:100%;" src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/country/card_small/cz.jpg" alt="...">
+			  <div class="caption">
+				<h3>Чехия</h3>
+				<p>23 867 руб.</p>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+			  <img style="width:100%; highy:100%;" src="https://cdn1.tu-tu.ru/images2/bemp/blocks/tours/country/card_small/ae.jpg" alt="...">
+			  <div class="caption">
+				<h3>ОАЭ</h3>
+				<p>19 318 руб.</p>
+			  </div>
+			</div>
+		  </div>
+	</div>
+		
+</div>
+
+
+
+<div class="container">
+	<!-- Форма калькулятора-->
+	<form id="nubexForm" onsubmit="return false;">
+		<div  class = "calculator-form">
+		<select form = "nubexForm" id="country" value="1" width = "100px" onChange="fillHotelsList()"class="form-control form-control-sm">
+			<option>Выберите страну</option>
+			<option>Египет</option>
+			<option>Турция</option>
+			<option>Вьетнам</option>
+			<option>Англия</option>
+			<option>Дубаи</option>
+		</select>
+
+		<select id="hotels" onChange="fillRoomsList()" class="form-control form-control-sm">
+				
+		</select>
+
+		<select id="hotelRoom" onChange="collectData()" class="form-control form-control-sm">
+
+		</select>
+		
+		
+		<input id="childrenAmount" class=" input input-large" placeholder = "Количество детей"/>
+		
+		<input id="adultsAmount" class="input input-mini" placeholder = "Количество взрослых"/>
+		
+		<input id="daysAmount" class="input input-mini" placeholder = "Количество дней"/>
+		<input type="submit"  class="btn btn-info" value="Рассчитать" onclick = "calculate()"/>
+ 	
+		<input type="text" id="result">
+		</div>
+		
+		
+	</form>
+</div>
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Проекты </h3>
+                    <ul>
+                        <li> <a href="#"> Новости </a> </li>
+                        <li> <a href="#"> Отзывы </a> </li>
+                        <li> <a href="#"> Туроператоры </a> </li>
+                    </ul>
+                </div>
+               <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Туроператоры </h3>
+                    <ul>
+                        <li> <a href="#"> Black hornet</a> </li>
+                        <li> <a href="#"> Testour </a> </li>
+                        <li> <a href="#"> Alpha </a> </li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-2  col-md-2 col-sm-4 col-xs-6">
+                    <h3> Контакты </h3>
+                    <ul>
+                        <li> <a href="#"> 89001552223</a> </li>
+                        
+                    </ul>
+                </div>
+                <div class="col-lg-3  col-md-3 col-sm-6 col-xs-12 ">
+                    <h3> Соц. сети </h3>
+                    <ul>
+                        <li>
+                            <div class="input-append newsletter-box text-center">
+                                <input type="text" class="full text-center" placeholder="Email ">
+                                <button class="btn  bg-gray" type="button"> Отправить email <i class="fa fa-long-arrow-right"> </i> </button>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="social">
+                        <li> <a href="#"> <i class=" fa fa-facebook">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-twitter">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-google-plus">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-pinterest">   </i> </a> </li>
+                        <li> <a href="#"> <i class="fa fa-youtube">   </i> </a> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
