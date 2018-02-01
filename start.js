@@ -1,7 +1,8 @@
 let express = require('express'),
     winston = require('winston'),
 path = require('path');
-const port = 2000;
+const port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+const  ip_address =  process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
 let app = express();
 
 const logger = winston.createLogger({
@@ -36,5 +37,5 @@ app.get('/images/:file',function(req,res){
     res.sendFile(path.join(__dirname,'/sources/images/',req.params.file));
 });
 
-app.listen(8080);
-console.log("Слушаем порт: " + port);
+app.listen(port,ip_address);
+console.log("Слушаем хост:" + ip_address + " порт: " + port);
