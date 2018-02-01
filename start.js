@@ -36,5 +36,5 @@ app.get('/images/:file',function(req,res){
     res.sendFile(path.join(__dirname,'/sources/images/',req.params.file));
 });
 
-app.listen(2000);
+app.listen(8080);
 console.log("Слушаем порт: " + port);
