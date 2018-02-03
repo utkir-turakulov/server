@@ -5,8 +5,9 @@
     "express": "^4.16.2",
     "winston": "^3.0.0-rc1"
   },
-  "main": "start.js",
-  "scripts":"npm start.js",
+  "scripts":{
+    "start": "npm start.js"
+  }
   "repository": {
     "type": "git",
     "url": "https://github.com/utkir-turakulov/server.git"
