@@ -6,7 +6,7 @@
     "winston": "^3.0.0-rc1"
   },
   "scripts":{
-    "start": "npm start.js"
+    "start": "node start.js"
   },
   "repository": {
     "type": "git",
