@@ -1,7 +1,7 @@
 let express = require('express'),
     winston = require('winston'),
 path = require('path');
-const port = 3000;
+const port = 8080;
 let app = express();
 
 const logger = winston.createLogger({
