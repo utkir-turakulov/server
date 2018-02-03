@@ -1,7 +1,7 @@
 let express = require('express'),
     winston = require('winston'),
 path = require('path');
-const port = 2000;
+const port = 3000;
 let app = express();
 
 const logger = winston.createLogger({
@@ -36,5 +36,10 @@ app.get('/images/:file',function(req,res){
     res.sendFile(path.join(__dirname,'/sources/images/',req.params.file));
 });
 
-app.listen(8080);
+app.get('/js/:file',function(req,res){
+    console.log(req.params.file);
+    res.sendFile(path.join(__dirname,'/sources/js/',req.params.file));
+});
+
+app.listen(port);
 console.log("Слушаем порт: " + port);
