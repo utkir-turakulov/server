@@ -28,23 +28,23 @@ app.get('/css/:path',function(request,response){
 });
 app.get('/sources/bootstrap/:file',function(req,res){
   //  console.log(req.params.file);
-	console.log("Connected client: " +request.ip);
+	console.log("Connected client: " +req.ip);
     res.sendFile(path.join(__dirname,'/sources/bootstrap/',req.params.file));
 });
 app.get('/sources/images/:file',function(req,res){
  //   console.log(req.params.file);
-    console.log("Connected client: " +request.ip);
+    console.log("Connected client: " +req.ip);
     res.sendFile(path.join(__dirname,'/sources/images/',req.params.file));
 });
 app.get('/images/:file',function(req,res){
    // console.log(req.params.file);
-    console.log("Connected client: " +request.ip);
+    console.log("Connected client: " +req.ip);
     res.sendFile(path.join(__dirname,'/sources/images/',req.params.file));
 });
 
 app.get('/js/:file',function(req,res){
   //  console.log(req.params.file);
-    console.log("Connected client: " +request.ip);  
+    console.log("Connected client: " +req.ip);  
     res.sendFile(path.join(__dirname,'/sources/js/',req.params.file));
 });
 
